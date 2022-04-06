@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Calculatrice de l'IMC</title>
+    <link rel="icon" href="img/logo.png" type="image/icon type">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header>Calcul d'IMC plutôt sympa</header>
+    <nav>
+        <ul>
+            <li><a href="index.html" title="Accéder à la page d'acceuil">Accueil</a></li>
+            <li><a href="IMC.html" title="Accéder à la calculatrice d'IMC">IMC</a></li>
+            <li><a href="credit.html" title="Accéder aux crédits">Crédits</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Qu'est-ce que l'IMC ?</h1>
+        <p>L’indice de masse corporelle ou IMC (en anglais, body mass index ou BMI) est une grandeur qui permet d'estimer la corpulence d’une personne. Inventé au milieu du XIXe siècle par Adolphe Quetelet, mathématicien belge et l'un des fondateurs de la statistique moderne, cet indice est appelé aussi l'indice de Quetelet (Selon <a href="https://fr.wikipedia.org/wiki/Indice_de_masse_corporelle">Wikipedia</a>)</p>
+        <p>Voici un tableau représentatif des différentes interprétation</p>
+        <br>
+        <table>
+            <thead>
+                <tr>
+                  <th>IMC</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Moins de 16,5</td>
+                  <td>Dénutrition</td>
+                </tr>
+                <tr>
+                  <td>16,5 à 18,5</td>
+                  <td>maigreur</td>
+                </tr>
+                <tr>
+                    <td>18,5 à 25</td>
+                    <td>Poids normal</td>
+                  </tr>
+                  <tr>
+                    <td>25 à 30</td>
+                    <td>Surpoids</td>
+                  </tr>
+                  <tr>
+                    <td>30 à 35</td>
+                    <td>Obésité modéré</td>
+                  </tr>
+                  <tr>
+                    <td>35 à 40</td>
+                    <td>Obésité sévère</td>
+                  </tr>
+                  <tr>
+                    <td>40 et plus</td>
+                    <td>Obésité morbide ou massive</td>
+                  </tr>
+              </tbody>
+        </table>
+        <br>
+        
+        <h1>Comment calculer mon indice</h1>
+        
+    </math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/980a6927192971f80e455e1c7bcaffa01e394a74" aria-hidden="true" style="vertical-align: -0.338ex; width:15.225ex; height:2.676ex;"/></span> (selon le système international)
+    </p> avec P la masse corporelle (en kilogrammes) et T la stature (en mètres).<p>
+    </p>L'IMC s'exprime donc en kg/m<sup>2</sup>. Ce n'est donc pas un indice (valeur sans unité) au sens mathématique du terme.<p>
+    </p>Exemple&#160;:<p>
+    <ul><li>soit une personne de 1,74&#160;<abbr class="abbr" title="mètre">m</abbr> et d'un poids de 65,5&#160;<abbr class="abbr" title="kilogramme">kg</abbr>&#160;;</li>
+    <li>son IMC = 65,5 / 1,74<sup>2</sup> = 65,5 / 3,0276 = 21,6  (21,6&#160;kg/m<sup>2</sup>).</li></ul>
+
+        <br>
+
+        <h1>Que vaut mon IMC</h1>
+        <p>Allez le calcul là c'est le plus important</p>
+        
+        <form action="" method="post" id="bmiform">
+            <p>Poids : <input type="number" id="poids" name="poids" min="10" max="300" required>kg</p>
+            <p>Taille : <input type="number" id="taille" name="taille" min="0.5" max="3.0" required>m</p>
+            <button type="button" id="valider">Calculer !</button>
+        </form>
+        <!-- Affiche le résultat -->
+        <p id="res"></p>
+        <!-- Affiche le tableau dynamique -->
+        <p>
+            <p class="hidden">Avec votre taille, votre catégorie d'IMC en fonction de votre poids :</p>
+            <table class="hidden">
+                <thead>
+                    <tr>
+                        <th>Poids</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="row1">
+                        <td>Moins de <span class="valeur1"></span></td>
+                        <td>Dénutrition</td>
+                    </tr>
+                    <tr id="row2">
+                        <td><span class="valeur1"></span> à <span class="valeur2"></span></td>
+                        <td>Maigreur</td>
+                    </tr>
+                    <tr id="row3">
+                        <td><span class="valeur2"></span> à <span class="valeur3"></span></td>
+                        <td>Poids normal</td>
+                    </tr>
+                    <tr id="row4">
+                        <td><span class="valeur3"></span> à <span class="valeur4"></span></td>
+                        <td>Surpoids</td>
+                    </tr>
+                    <tr id="row5">
+                        <td><span class="valeur4"></span> à <span class="valeur5"></span></td>
+                        <td>Obésité modéré</td>
+                    </tr>
+                    <tr id="row6">
+                        <td><span class="valeur5"></span> à <span class="valeur6"></span></td>
+                        <td>Obésité sévère</td>
+                    </tr>
+                    <tr id="row7">
+                        <td><span class="valeur6"></span> et plus</td>
+                        <td>Obésité morbide ou massive</td
+                            ></tr>
+                </tbody>
+            </table>
+        </p>
+        <button type="button" class="hidden" onclick="appendToStorage(val1, val2)">Sauvegarder</button>
+        <div id="save"></div>
+
+    </main>
+
+    <footer>
+        contact us <a href = "mailto:58782@etu.he2b.com?subject = Feedback&body = Prise de contact">Envoyer un mail avec sujet (prise de contact)</a>
+        <br>
+        58782 Drieskens Léo B121 DNA
+    </footer>
+</body>
+</html>

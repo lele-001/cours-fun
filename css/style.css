@@ -1,0 +1,158 @@
+body{
+    height: 100%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header{
+    font-family:'Ubuntu', sans-serif;
+    color: black;
+    font-size: 4em;
+    margin-top: 25px;
+}
+
+/* Plus amusant lorsqu'on met sa souris dessus en vrai de vrai */
+header:hover{
+    text-shadow: 2px 2px #393b3b73;
+}
+
+nav{
+    background-color: rgba(8, 8, 8, 0.815);
+}
+
+footer{
+    text-align: center;
+}
+
+/* Images */
+div.galerie{
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 0px 0px 6px 6px;
+    float: left;
+    width: 20em;
+    align-content: center;
+  }
+
+div.galerie:hover{
+    border: 1px solid #777;
+}
+
+div.galerie img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+div.desc{
+    padding: 5px;
+    text-align: center;
+}
+
+
+
+/* Mise en page en grille */
+.grid{
+    display: grid; 
+ 
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    gap: 0px;
+    height: 100%;
+ 
+    
+ }
+   
+ #item-0{
+
+    grid-row-start: 1;
+    grid-column-start: 1;
+ 
+    grid-row-end: 2;
+    grid-column-end: 2;
+    
+ }
+ 
+ #item-1{
+     grid-row-start: 1;
+    grid-column-start: 2;
+ 
+    grid-row-end: 2;
+    grid-column-end: 3;
+    
+ }
+ #item-2 {
+ 
+    grid-row-start: 1;
+    grid-column-start: 3;
+ 
+    grid-row-end: 2;
+    grid-column-end: 4;
+    
+ }
+ /* Style tableau */
+ table{
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+    
+    overflow-x: auto;
+    
+    white-space: nowrap;
+  
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+table, tbody{
+    background: radial-gradient(left, ellipse, rgba(0,0,0, .2) 0%, rgba(0,0,0, 0) 75%) 0 center,
+                radial-gradient(right, ellipse, rgba(0,0,0, .2) 0%, rgba(0,0,0, 0) 75%) 100% center;
+    background-size: 10px 100%, 10px 100%;
+    background-attachment: scroll, scroll;
+    background-repeat: no-repeat;
+}
+  
+table th {
+    font-size: 11px;
+    text-align: left;
+    text-transform: uppercase;
+    background: #f2f0e6;
+}
+  
+table th, table td {
+    padding: 6px 12px;
+    border: 1px solid #d9d7ce;
+  }
+
+ /* Menu horizontal mon pote */
+
+nav ul{
+	display: flex;
+    flex-direction: row;
+	list-style-type: none;
+}
+
+nav li a{
+	display: block;
+	text-decoration: none;
+	color: white;
+	padding: 8px 16px;
+}
+
+nav li a:hover{
+	background-color: #1dcceb;
+	color: rgb(8, 8, 8);
+}
+
+/* classe hidden */
+.hidden{
+    display: none;
+    visibility: hidden;
+}
+
+/* Poids tableau */
+.ligneTab{
+    background-color: #1dcceb;
+}
